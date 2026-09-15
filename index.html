@@ -1,1 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmersión RE$ET DE TUS VENTA$</title>
+    <!-- Fuente Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Paleta de Colores y Variables */
+        :root {
+            --color-1: #e5dbc3; /* Claro 1 */
+            --color-2: #f4d7b5; /* Claro 2 */
+            --color-3: #d1b35a; /* Dorado */
+            --color-4: #027361; /* Verde oscuro */
+            --color-5: #1a3a17; /* Verde más oscuro */
+            --color-white: #ffffff;
+            --btn-gold-rose: linear-gradient(135deg, #d1b35a 0%, #e8a6a6 50%, #d1b35a 100%);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--color-1);
+            color: var(--color-5);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--color-4);
+        }
+
+        /* Botones */
+        .btn-principal {
+            background: var(--btn-gold-rose);
+            color: #000000; /* Letras negras */
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(209, 179, 90, 0.6);
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-principal:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(209, 179, 90, 0.8);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(209, 179, 90, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(209, 179, 90, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(209, 179, 90, 0); }
+        }
+
+        /* BLOQUE 1 */
+        .bloque-1 {
+            text-align: center;
+            background-color: var(--color-white);
+            padding: 60px 20px;
+            border-bottom: 5px solid var(--color-3);
+        }
+        .bloque-1 h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--color-5);
+        }
+        .bloque-1 p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--color-4);
+        }
+
+        /* BLOQUE 2 */
+        .bloque-2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            background-color: var(--color-5);
+            color: var(--color-white);
+            padding: 60px 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .bloque-2 .columna {
+            flex: 1;
+            min-width: 300px;
+        }
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .formulario input {
+            padding: 15px;
+            border: 2px solid var(--color-3);
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: var(--color-1);
+            color: var(--color-5);
+        }
+        .img-logo {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* BLOQUE 3 */
+        .bloque-3 {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--color-2);
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+        .bloque-3 h2 {
+            font-size: 1.8rem;
+            color: var(--color-5);
+        }
+
+        /* BLOQUE 4 */
+        .bloque-4 {
+            padding: 40px 0;
+        }
+        .bloque-4-titulo {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--color-4);
+        }
+        .columnas-precios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .columna-precio {
+            flex: 1;
+            min-width: 300px;
+            background: var(--color-white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--color-3);
+        }
+        .columna-precio h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--color-4);
+        }
+        .columna-precio p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        .inversion {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--color-5);
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* BLOQUE 5 */
+        .bloque-5 {
+            padding: 60px 0;
+            background-color: var(--color-white);
+        }
+        .bloque-5 h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+        .historias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .historia-card {
+            background: var(--color-1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .historia-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 3px solid var(--color-3);
+        }
+        .historia-card h4 {
+            color: var(--color-5);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .historia-card p {
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* BLOQUE 6 */
+        .bloque-6 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 0;
+        }
+        .bloque-6 .columna {
+            flex: 1;
+            min-width: 300px;
+        }
+        .bloque-6 h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .bloque-6 h3 {
+            color: var(--color-3);
+            margin-bottom: 20px;
+        }
+        .bloque-6 p {
+            margin-bottom: 15px;
+        }
+        .img-facilitadora {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* BLOQUE 7 */
+        .bloque-7 {
+            text-align: center;
+            background-color: var(--color-4);
+            color: var(--color-white);
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .bloque-7 h2 {
+            color: var(--color-3);
+            margin-bottom: 15px;
+        }
+        
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--color-5);
+            color: var(--color-white);
+        }
+        .piramide-icon {
+            color: var(--color-3);
+            font-size: 1.2rem;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        /* MODALES */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(26, 58, 23, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background: var(--color-white);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 3px solid var(--color-3);
+            text-align: center;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-5);
+            font-weight: bold;
+        }
+        .modal-content h2 {
+            color: var(--color-4);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .modal-content h3 {
+            color: var(--color-3);
+            margin-bottom: 20px;
+        }
+        .links-pago {
+            text-align: left;
+            margin-top: 20px;
+            background: var(--color-1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .links-pago p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .links-pago a {
+            color: var(--color-4);
+            font-weight: bold;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BLOQUE 1 -->
+    <div class="bloque-1">
+        <div class="container">
+            <h1>¿CUÁNTO DE LO QUE TODAVÍA NO VENDES<br>TIENE QUE VER CON<br>¿CUÁNTO TE PERMITES RECIBIR?</h1>
+            <p>2 horas para identificar y recodificar un patrón de AMOR PROPIO, CONFIANZA Y MERECER RECIBIR que se expresa en tu forma de vender.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- BLOQUE 2 -->
+        <div class="bloque-2" id="registro">
+            <div class="columna">
+                <form class="formulario" id="mainForm">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="telefono" placeholder="Teléfono con código país" required>
+                    <button type="submit" class="btn-principal">QUIERO EL RE$ET DE MIS VENTAS</button>
+                </form>
+            </div>
+            <div class="columna">
+                <img src="Imagen logo reset de tus ventas.jpg" alt="Logo Reset de tus Ventas" class="img-logo">
+            </div>
+        </div>
+
+        <!-- BLOQUE 3 -->
+        <div class="bloque-3">
+            <h2>NO NECESITAS MÁS TÉCNICAS DE VENTAS, MARKETING, ESTRATEGIAS … @...<br><br>
+            TE INVITO A <strong>ELEGIR</strong> <strong>RECODIFICAR</strong> CÓMO TE RELACIONAS CON TU PROPIO VALOR</h2>
+        </div>
+
+        <!-- BLOQUE 4 -->
+        <div class="bloque-4">
+            <h2 class="bloque-4-titulo">Inmersión RE$ET DE TUS VENTA$</h2>
+            <div class="columnas-precios">
+                <!-- General -->
+                <div class="columna-precio">
+                    <h3><strong>INMERSIÓN GRUPAL GENERAL:</strong></h3>
+                    <p>1. <strong>ENERGÍA:</strong> Práctica BIOHACKING para identificar una distorsión predominante en torno a las ventas, hacer la depuración, reemplazarlo por nueva información y sostenimiento.</p>
+                    <p>2. <strong>ESTRUCTURA:</strong> Ecosistemas magnéticos + AI, Adquisición de clientes y ventas conscientes automatizadas 24/7</p>
+                    <p>3. <strong>VENTAS CUÁNTICAS:</strong> Eres un campo magnético usalo.</p>
+                    <p>4. Bono especial para iniciar con tu negocio digital</p>
+                    <p>5. Recursos workbook + Grupo de whatsapp +</p>
+                    <p>6. Intensivo 2 horas + 30 minutos</p>
+                    <p class="inversion">General Inversión $ 49 USD</p>
+                    <button class="btn-principal" onclick="scrollToForm()">QUIERO EL RE$ET DE MIS VENTAS</button>
+                </div>
+                
+                <!-- VIP -->
+                <div class="columna-precio">
+                    <h3><strong>INMERSIÓN GRUPAL GENERAL + VIP:</strong></h3>
+                    <p>1. Toda la inmersión general +</p>
+                    <p>2. <strong>RECODIFICACIÓN MENTE CUERPO PROFUNDA</strong> aumentando tu canal de creación energética en tus ventas</p>
+                    <p>3. Práctica en vivo de VENTA$ en TIEMPO REAL.</p>
+                    <p>4. Mentoría grupal.</p>
+                    <p>5. Preguntas y respuestas</p>
+                    <p>6. Bono especial para escalar tu negocio digital</p>
+                    <p>7. Intensivo 2 horas + 30 minutos</p>
+                    <p class="inversion">General + VIP Inversión $ 99 USD</p>
+                    <button class="btn-principal" onclick="scrollToForm()">QUIERO EL RE$ET DE MIS VENTAS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOQUE 5 -->
+    <div class="bloque-5">
+        <div class="container">
+            <h2>HISTORIAS DE ÉXITO</h2>
+            <div class="historias-grid">
+                <div class="historia-card">
+                    <img src="Familia Baffony.jpg" alt="Familia Baffoni" class="historia-img">
+                    <h4>Familia Baffoni<br>Empresarios Infoproductos USA</h4>
+                    <p>"Querida Luz muy agradecidos por tu acompañamiento ultra profesional, nos llevaste a escalar nuestro negocio y lo más loco vender hasta un año anticipado las capacitaciones en un mercado tan competido como los es USA, gracias por tu visión, estrategia y tu calor humano, siempre se puede ver más allá. Posdata la energía ha sido la magia."</p>
+                </div>
+                <div class="historia-card">
+                    <img src="Nancy Sanchez.jpg" alt="Nancy Sánchez" class="historia-img">
+                    <h4>Nancy Sánchez<br>Medicina Emocional Latam, USA, EU</h4>
+                    <p>"Mi amiga y mentora Luz Aura, gracias por ayudarme a organizar el tema de todo mi emprendimiento, muy simpática conmigo tuviste mucha paciencia, me acompañaste a dar ese salto cuántico de empleada a emprender, a conectar con mis dones y lanzarme a hacer mis talleres, programas y productos digitales y físicos, mis conferencias y vivir en propósito de nuevo, me dio claridad hacer las cosas sin lucha y a desarrollar una mentalidad de empresaria, le perdí el miedo a vender a ofrecer mis servicios desde mi energía sostenida, conectando con mi amor y mi poder, ahora vivo de mis pasiones, llevo mi negocio con gran éxito y me siento privilegiada, estoy muy agradecida con Dios y contigo."</p>
+                </div>
+                <div class="historia-card">
+                    <img src="Dra_Martha_Daza.jpg" alt="Dra. Martha Daza" class="historia-img">
+                    <h4>Dra. Martha Daza<br>Médico escritora, empresaria Latam y USA</h4>
+                    <p>"Luz Aura llegó en un momento especial de mi vida, me ayudó a activar mi energía de empresaria y pase de ser director médico con un cargo y sueldo importante a emprender con gran éxito, ir por mis sueños y lanzar mi primer libro Código Genético del Alma, hoy ya son más de 5 libros y mi comunidad y ventas con magia que es lo mejor, siguen creciendo, gracias Lucesita en público eres un faro. tu claridad, tu carisma y tu nivel de compromiso me asombran."</p>
+                </div>
+                <div class="historia-card">
+                    <img src="Lucia Meir.jpg" alt="Lucia Meir" class="historia-img">
+                    <h4>Lucia Meir<br>Educadora emocional USA y EU</h4>
+                    <p>“Mis ingresos están estables y vivo en el condado que anhelaba y creando proyectos de impacto, disfrutando de tanta magia en mi vida, gracias Luz Aura por acompañarme, a tener claridad, orden, a fusionar la energía en mis proyectos, a sistematizar mis procesos de ventas que no paran, a entender que puedo elegir los 3 recursos fue lo más revelador, vivirlo integrarlo me fascino, gracias por tu amor y profesionalismo."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOQUE 6 -->
+    <div class="container">
+        <div class="bloque-6">
+            <div class="columna">
+                <h2><strong>FACILITADORA:</strong></h2>
+                <h3>Luz Aura Sánchez M.<br>El AMOR desde el ESPÍRITU, es la RESPUESTA<br>Estratega de Negocios Conscientes | Sanadora energética</h3>
+                <p>Uno de mis propósitos es acompañarte a recordar quién eres desde la consciencia, reconectar con tu energía vital inspirarte a través de mi camino, experiencia vivencial y la metodología desarrollada RECORIGEN® para apoyarte a despertar tu poder interno retomando tu soberanía a vivir con plenitud y expandir un legado generacional con tu negocio en evolución consciente a tu familia y el mundo.</p>
+                <p>13 años como empresaria. Founder de Comunidad Hispana Online y Co Founder de agencias y consultoras de negocios para Latam y USA — marcas y mercados de grandes superficies.</p>
+                <p>Formaciones en salud: Psicoterapeuta cuántica en formación, Formación, estudios e investigación en diferentes disciplinas: Ciencias, Física Cuántica, Comportamiento humano, reingeniería humana del ser, Hipnosis, Sanación Energética, reprogramación neurolingüística, … Formación en negocios, ventas, marketing, CRM,, coaching de metas. finanzas y tecnología AI.</p>
+            </div>
+            <div class="columna">
+                <img src="Imagen Luz.jpg" alt="Luz Aura Sánchez M." class="img-facilitadora">
+            </div>
+        </div>
+
+        <!-- BLOQUE 7 -->
+        <div class="bloque-7">
+            <h2>Fecha Grupo 1</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px;"><strong>Jueves 17 de septiembre Intensivo de 2 horas 6.30 pm a 8.30 pm Col. Tx<br>(Aforo reducido)</strong></p>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;">Tu próximo nivel de facturación empieza con un reset</p>
+            <button class="btn-principal" style="max-width: 400px;" onclick="scrollToForm()">QUIERO EL RE$ET DE MIS VENTAS</button>
+        </div>
+    </div>
+
+    <!-- BLOQUE 8 (Footer) -->
+    <footer>
+        Comunidad Hispana Online Copyright © 2026 <span class="piramide-icon">▲✨</span>
+    </footer>
+
+    <!-- MODAL DE ÉXITO Y PAGO -->
+    <div class="modal-overlay" id="modalExito">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <h2><em>TE FELICITO POR ELEGIR TU SOBERANIA Y EXPANDIRLO EN TU VIDA,<br>EN TUS PROYECTOS, EN TU NEGOCIO Y VENTAS CONSCIENTES</em></h2>
+            <h3>INTENSIVO INMERSIÓN RE$ET DE TUS VENTA$ GRUPAL</h3>
+            
+            <div class="links-pago">
+                <p><strong>1. LINK DE PAGO</strong><br>
+                <a href="https://pay.hotmart.com/V106898705O?checkoutMode=10&bid=1785122830774" target="_blank">https://pay.hotmart.com/V106898705O?checkoutMode=10&bid=1785122830774</a><br>
+                Entrada General $ 49 USD | Entrada General + VIP $ 99 USD</p>
+                
+                <p><strong>2. Pagos nacionales Colombia (Transferencia):</strong><br>
+                Banco Davivienda | Llave @DAVILSM027 | Cuenta ahorros # 488 438 289 677<br>
+                BANCO NU | Llave LSM953 | Cuenta ahorros 19837044</p>
+                
+                <p><strong>3. Pagos con Paypal:</strong><br>
+                General: <a href="https://www.paypal.com/paypalme/luzaurasanchezm/49" target="_blank">https://www.paypal.com/paypalme/luzaurasanchezm/49</a><br>
+                General + VIP: <a href="https://www.paypal.com/paypalme/luzaurasanchezm/99" target="_blank">https://www.paypal.com/paypalme/luzaurasanchezm/99</a></p>
+                
+                <p><strong>4. Envío de comprobante:</strong><br>
+                Vía email: holacomunidadhispana@gmail.com<br>
+                WhatsApp: +57 321 867 5602</p>
+                
+                <p><strong>5.</strong> Una vez nos notifiques de la transferencia, nos estaremos contactando contigo para adjuntar la liga de agenda de acuerdo a tu disponibilidad e iniciar con tu proceso de evolución consciente.</p>
+                
+                <p style="text-align: center; margin-top: 20px;">
+                Cordialmente<br>
+                Equipo de Luz Aura Sánchez M.<br>
+                Comunidad Hispana Online
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE FUNCIONALIDAD -->
+    <script>
+        // Función para que los botones lleven al formulario
+        function scrollToForm() {
+            document.getElementById('registro').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById('modalExito').style.display = 'none';
+        }
+
+        // Funcionalidad de envío del formulario
+        document.getElementById('mainForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página recargue
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            // Enviar datos silenciosamente usando FormSubmit API (Fetch)
+            fetch("https://formsubmit.co/ajax/holacomunidadhispana@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Al enviar con éxito, muestra la ventana flotante (Modal)
+                document.getElementById('modalExito').style.display = 'flex';
+                this.reset(); // Limpia el formulario
+            })
+            .catch(error => {
+                // En caso de que el cliente use bloqueadores, mostrar el modal de todas formas
+                document.getElementById('modalExito').style.display = 'flex';
+                console.log(error);
+            });
+        });
+    </script>
+</body>
+</html>
